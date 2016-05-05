@@ -1,3 +1,4 @@
+require 'typhoeus'
 module MessengerPlatform
   module Entities
     class Message
