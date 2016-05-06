@@ -1,3 +1,5 @@
+require 'typhoeus'
+
 require 'messenger_platform/config'
 require 'messenger_platform/api'
 require 'messenger_platform/parser'
