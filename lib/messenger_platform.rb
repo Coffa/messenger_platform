@@ -19,8 +19,8 @@ module MessengerPlatform
     Api.call(:image, receiver_id, image_url)
   end
 
-  def welcome(page_id, text)
-    Api.call(:welcome, page_id, text)
+  def welcome(template_type, *args)
+    Api.call("welcome_#{template_type}", *args)
   end
 
   def payload(template_type, *args)

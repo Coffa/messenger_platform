@@ -1,4 +1,6 @@
 require 'messenger_platform/entities/welcome'
+require 'messenger_platform/entities/welcome_text'
+require 'messenger_platform/entities/welcome_generic'
 require 'messenger_platform/entities/message'
 require 'messenger_platform/entities/text'
 require 'messenger_platform/entities/image'
