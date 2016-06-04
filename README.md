@@ -30,10 +30,24 @@ end
 ```
 
 #### Welcome
-There are two types of welcome message: `text` and `generic`
+There are two types of welcome message: `text`. `button` and `generic`
 
 ```ruby
 MessengerPlatform.welcome(:text, nil, 'Hello world') # => nil can be changed by page id
+
+MessengerPlatform.payload(:button, nil, 'Hello world', [  # => nil can be changed by page id
+  {
+    "type" => "web_url",
+    "url" => "https://petersapparel.parseapp.com",
+    "title" => "Show Website"
+  },
+  {
+    "type" => "postback",
+    "title" => "Start Chatting",
+    "payload" => "USER_DEFINED_PAYLOAD"
+  }
+])
+
 
 MessengerPlatform.welcome(:generic, nil, [ # => nil can be changed by page id
   {
