@@ -1,3 +1,4 @@
+require 'messenger_platform/entities/me'
 require 'messenger_platform/entities/welcome'
 require 'messenger_platform/entities/message'
 require 'messenger_platform/entities/text'

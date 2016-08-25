@@ -1,7 +1,6 @@
 module MessengerPlatform
   module Config
 
-    mattr_accessor :page_id
     mattr_accessor :token
 
     mattr_accessor :end_point

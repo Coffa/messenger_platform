@@ -11,6 +11,10 @@ module MessengerPlatform
     yield(Config) if block_given?
   end
 
+  def me(uid)
+    Api.call(:me, uid)
+  end
+
   def text(receiver_id, text)
     Api.call(:text, receiver_id, text)
   end
@@ -19,7 +23,7 @@ module MessengerPlatform
     Api.call(:image, receiver_id, image_url)
   end
 
-  def welcome(page_id, text)
+  def welcome(text)
     Api.call(:welcome, page_id, text)
   end
 

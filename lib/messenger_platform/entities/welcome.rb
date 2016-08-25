@@ -10,12 +10,11 @@ module MessengerPlatform
       def call(text)
         params = {
           access_token: Config.token,
-          setting_type: 'call_to_actions',
-          thread_state: 'new_thread',
-          call_to_actions: [{ message: { text: text } }]
+          setting_type: 'greeting',
+          greeting: { text: text }
         }
 
-        Typhoeus.post("#{Config.end_point}/#{page_id || Config.page_id}/thread_settings", body: params)
+        Typhoeus.post("#{Config.end_point}/me/thread_settings", body: params)
       end
     end
   end
